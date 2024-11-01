@@ -6,11 +6,34 @@ class Profileview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Icon(
-        Icons.person,
-        size: 200,
-        color: Colors.grey,
-      ),
-    );
+        child: Column(
+      children: [
+        CircleAvatar(
+          radius: 100,
+          backgroundImage: AssetImage("images/img.png"),
+        ),
+        SizedBox(height: 40),
+        Text(
+          "Mohammed Manouni",
+          style: TextStyle(fontSize: 30, color: Colors.green),
+        ),
+        SizedBox(
+          height: 40,
+        ),
+        Text(
+          "mhd@gmail.com",
+          style: TextStyle(fontSize: 28),
+        ),
+        SizedBox(height: 50),
+        ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.indigo,
+                backgroundColor: Colors.amber,
+                elevation: 20,
+                fixedSize: Size(400, 25)),
+            onPressed: () {},
+            child: Text("Modifier le profile"))
+      ],
+    ));
   }
 }
